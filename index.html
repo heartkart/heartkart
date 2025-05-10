@@ -28,10 +28,10 @@
             position: relative;
             width: 100%;
             padding-top: 133.33%; /* 4/3 = 1.3333 = 133.33% for 3:4 ratio (width:height) */
-            /* aspect-ratio: 3 / 4 ; */
             overflow: hidden;
             border-radius: 8px;
             margin-bottom: 1rem;
+            background: #fff;
         }
 
         .image-container img {
@@ -106,33 +106,36 @@
             flex-direction: column;
             justify-content: space-between;
             height: 100%;
-            min-height: 420px;
+            min-height: 400px;
         }
-
         .product-card:hover {
             transform: translateY(-5px);
         }
 
         .product-card img {
             width: 100%;
-            height: 200px;
+            height: auto;
+            /* height: 200px; */
+            aspect-ratio: 3 / 4;
             object-fit: cover;
             border-radius: 8px;
         }
 
         .product-card h2 {
-            margin: 1rem 0;
+            margin: 1rem 0 0.5rem;
             font-size: 1.25rem;
         }
 
         .product-card button {
+            margin-top: auto; /* Pushes button to bottom of card if possible */
             background-color: var(--primary);
             color: var(--text);
             border: none;
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 20px;
             cursor: pointer;
             transition: background-color 0.3s;
+            font-size: 0.95rem;
         }
 
         .product-card button:hover {
@@ -184,7 +187,7 @@
             <!-- Key-Ring       -->
             <div class="product-card" data-category="keyrings">
                 <div class="image-container">
-                <img src="images/keyring.jpg" alt="Key Ring">
+                    <img src="images/keyring.jpg" alt="Key Ring">
                 </div>
                 <h2>Key Ring</h2>
                 <button onclick="sendWhatsApp('Key Ring', 'images/keyring.jpg')">Inquire on WhatsApp</button>
@@ -192,7 +195,14 @@
             <!-- Scrunchy       -->
             <div class="product-card" data-category="scrunchies">
                 <div class="image-container">
-                <img src="images/scrunchies/WhatsApp Image 2025-05-09 at 11.47.38 PM.jpeg" alt="Scrunchy">
+                    <img src="images/scrunchies/WhatsApp Image 2025-05-09 at 11.47.38 PM.jpeg" alt="Scrunchy">
+                </div>
+                <h2>Golden Scrunchy</h2>
+                <button onclick="sendWhatsApp('Scrunchy', 'images/scrunchy.jpg')">Inquire on WhatsApp</button>
+            </div>
+            <div class="product-card" data-category="scrunchies">
+                <div class="image-container">
+                    <img src="images/scrunchies/WhatsApp Image 2025-05-09 at 11.47.38 PM.jpeg" alt="Scrunchy">
                 </div>
                 <h2>Golden Scrunchy</h2>
                 <button onclick="sendWhatsApp('Scrunchy', 'images/scrunchy.jpg')">Inquire on WhatsApp</button>
@@ -200,32 +210,40 @@
             <!-- Braclets      -->
             <div class="product-card" data-category="bracelets">
                 <div class="image-container">
-                <img src="images/bracelet.jpg" alt="Bracelet">
+                    <img src="images/bracelet.jpg" alt="Bracelet">
                 </div>
                 <h2>Bracelet</h2>
                 <button onclick="sendWhatsApp('Bracelet', 'images/bracelet.jpg')">Inquire on WhatsApp</button>
             </div>
             <div class="product-card" data-category="bracelets">
                 <div class="image-container">
-                <img src="images/bracelet.jpg" alt="Bracelet">
+                    <img src="images/bracelet.jpg" alt="Bracelet">
                 </div>
                 <h2>Bracelet</h2>
                 <button onclick="sendWhatsApp('Bracelet', 'images/bracelet.jpg')">Inquire on WhatsApp</button>
             </div>
             <!-- Wedding Frame       -->
             <div class="product-card" data-category="wedding">
+                <div class="image-container">
                 <img src="images/name_frames/wedding_frame.jpeg" alt="Wedding Frame">
+                </div>
                 <h2>Wedding Frame</h2>
                 <button onclick="sendWhatsApp('Wedding Frame', 'images/name_frames/wedding_frame.jpeg')">Inquire on WhatsApp</button>
             </div>
             <!-- Tasbih              -->
             <div class="product-card" data-category="tasbih">
+                <div class="image-container">
                 <img src="images/name_tasbih/tasbih_set.jpeg" alt="Wedding Frame">
+                </div>
+
                 <h2>Tasbih set with name</h2>
                 <button onclick="sendWhatsApp('Tasbih set with Name', 'images/name_tasbih/tasbih_set.jpeg')">Inquire on WhatsApp</button>
             </div>
             <div class="product-card" data-category="tasbih">
+                <div class="image-container">
                 <img src="images/name_tasbih/sky_blue_tasbih.jpeg" alt="Wedding Frame">
+                </div>
+
                 <h2>Galaxy Tasbih</h2>
                 <button onclick="sendWhatsApp('Tasbih set with Name', 'images/name_tasbih/tasbih_set.jpeg')">Inquire on WhatsApp</button>
             </div>
@@ -263,5 +281,4 @@
         });
     </script>
 </body>
-
 </html>
