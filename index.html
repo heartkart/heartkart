@@ -17,7 +17,7 @@
             --bg: #fffff0;
         }
 
-        * {
+        *{
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -27,7 +27,8 @@
         .image-container {
             position: relative;
             width: 100%;
-            aspect-ratio: 3 / 4; /* Portrait aspect ratio */
+            padding-top: 133.33%; /* 4/3 = 1.3333 = 133.33% for 3:4 ratio (width:height) */
+            /* aspect-ratio: 3 / 4 ; */
             overflow: hidden;
             border-radius: 8px;
             margin-bottom: 1rem;
@@ -180,6 +181,7 @@
 
     <main class="container">
         <section class="products">
+            <!-- Key-Ring       -->
             <div class="product-card" data-category="keyrings">
                 <div class="image-container">
                 <img src="images/keyring.jpg" alt="Key Ring">
@@ -187,15 +189,15 @@
                 <h2>Key Ring</h2>
                 <button onclick="sendWhatsApp('Key Ring', 'images/keyring.jpg')">Inquire on WhatsApp</button>
             </div>
-
+            <!-- Scrunchy       -->
             <div class="product-card" data-category="scrunchies">
                 <div class="image-container">
                 <img src="images/scrunchies/WhatsApp Image 2025-05-09 at 11.47.38 PM.jpeg" alt="Scrunchy">
                 </div>
-                <h2>Scrunchy</h2>
+                <h2>Golden Scrunchy</h2>
                 <button onclick="sendWhatsApp('Scrunchy', 'images/scrunchy.jpg')">Inquire on WhatsApp</button>
             </div>
-
+            <!-- Braclets      -->
             <div class="product-card" data-category="bracelets">
                 <div class="image-container">
                 <img src="images/bracelet.jpg" alt="Bracelet">
@@ -210,11 +212,13 @@
                 <h2>Bracelet</h2>
                 <button onclick="sendWhatsApp('Bracelet', 'images/bracelet.jpg')">Inquire on WhatsApp</button>
             </div>
+            <!-- Wedding Frame       -->
             <div class="product-card" data-category="wedding">
                 <img src="images/name_frames/wedding_frame.jpeg" alt="Wedding Frame">
                 <h2>Wedding Frame</h2>
                 <button onclick="sendWhatsApp('Wedding Frame', 'images/name_frames/wedding_frame.jpeg')">Inquire on WhatsApp</button>
             </div>
+            <!-- Tasbih              -->
             <div class="product-card" data-category="tasbih">
                 <img src="images/name_tasbih/tasbih_set.jpeg" alt="Wedding Frame">
                 <h2>Tasbih set with name</h2>
@@ -233,7 +237,7 @@
     </footer>
 
     <script>
-        const phoneNumber = '7905283565'; // Replace with your WhatsApp number in international format, e.g., 919876543210
+        const phoneNumber = '9236928401'; // Replace with your WhatsApp number in international format, e.g., 919876543210
 
         function sendWhatsApp(productName, imageUrl) {
             const message = `Hello, I'm interested in this product: *${productName}*%0AImage: ${location.origin}/${imageUrl}`;
